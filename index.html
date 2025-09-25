@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
     <title>Laurea Simone</title>
+    <script defer src="./src/script.js"></script>
 </head>
 
-<body
-    class="m-0 p-0 box-border bg-white font-sans w-screen sm:bg-red-500 md:bg-green-500 lg:bg-yellow-500 xl:bg-blue-200 2xl:bg-black flex flex-col gap-y-2">
+<body class="m-0 p-0 box-border bg-white font-sans w-screen flex flex-col gap-y-2">
     <header
         class="bg-[#004481] text-white text-center p-8 flex flex-col md:flex-row md:gap-x-10 items-center justify-center min-h-screen">
-        <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei stato/a scelto/a!
+        <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei stato/a scelto/a per il 23 ottobre
         </h1>
         <figure>
             <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
         </figure>
     </header>
     <main class="p-8 sm:p-20 flex flex-col gap-y-20 md:gap-y-24 items-center justify-center min-h-screen">
-        <video class="w-2xl h-auto justify-self-start" width="320" height="240" controls>
+        <video id="video-invito" class="w-2xl h-auto justify-self-start" width="320" height="240" controls>
             <source src="/invito.mp4" type="video/mp4">
         </video>
         <div
@@ -35,7 +35,8 @@
     <footer
         class="bg-[#004481] text-white text-center p-8 flex flex-col md:flex-row md:gap-x-10 items-center justify-center gap-y-10 min-h-screen">
         <p class="text-4xl sm:text-5xl max-w-2xs">Fammi sapere se ci sarai compilando questo modulo</p>
-        <a class="text-xl sm:text-3xl inline-block rounded-md p-2 sm:p-4 bg-[#92241d] hover:opacity-90" href=""
+        <a class="text-xl sm:text-3xl inline-block rounded-md p-2 sm:p-4 bg-[#92241d] hover:opacity-90"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLgV7Szo9jujns3Ytl5TGYbU_pp_y2DYra39Pfjx8Rz3ZWHQ/viewform?usp=dialog"
             target="_blank">Compila il
             modulo</a>
     </footer>
