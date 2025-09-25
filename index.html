@@ -9,7 +9,7 @@
     <script defer src="./src/script.js"></script>
 </head>
 
-<body class="m-0 p-0 box-border bg-white font-sans w-screen flex flex-col gap-y-2">
+<body class="m-0 p-0 box-border bg-white font-sans gap-y-2 overflow-x-hidden">
     <header
         class="bg-[#004481] text-white text-center p-8 flex flex-col md:flex-row md:gap-x-10 items-center justify-center min-h-screen">
         <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei stato/a scelto/a per il 23 ottobre
@@ -19,13 +19,15 @@
         </figure>
     </header>
     <main class="p-8 sm:p-20 flex flex-col gap-y-20 md:gap-y-24 items-center justify-center min-h-screen">
-        <video id="video-invito" class="w-2xl h-auto justify-self-start" width="320" height="240" controls>
-            <source src="./invito.mp4" type="video/mp4">
+        <video id="video-invito" class="w-2xl h-auto justify-self-start" width="10" height="10" controls>
+            <source src="./video/invito.webm" type="video/webm">
+            <source src="./video/invito.mp4" type="video/mp4">
+            Il tuo browser non supporta il formato video.
         </video>
         <div
-            class="w-full mx-14 flex flex-col md:flex-row justify-between md:items-baseline gap-4 md:gap-x-10 text-center text-xl md:text-2xl">
+            class="container flex flex-col md:flex-row justify-between md:items-baseline gap-4 md:gap-x-10 text-center text-xl md:text-2xl">
             <p class="bg-[#004481] text-white rounded-md py-2 md:px-2">Vi terrò aggiornati</p>
-            <a class="inline-block bg-[#c39d48] text-black hover:text-gray-700 underline rounded-md p-2"
+            <a class="inline-block bg-[#c39d48] text-black hover:text-gray-700 underline rounded-md p-2 break-words"
                 href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Via
                 Francesco De Sanctis, 1, 86100
                 Campobasso CB</a>
