@@ -6,10 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
     <title>Laurea Simone</title>
+    <script defer src="./src/script.js"></script>
 </head>
 
-<body>
-    <h1></h1>
+<body class="m-0 p-0 box-border bg-white font-sans w-screen flex flex-col gap-y-2">
+    <header
+        class="bg-[#004481] text-white text-center p-8 flex flex-col md:flex-row md:gap-x-10 items-center justify-center min-h-screen">
+        <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei stato/a scelto/a per il 23 ottobre
+        </h1>
+        <figure>
+            <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
+        </figure>
+    </header>
+    <main class="p-8 sm:p-20 flex flex-col gap-y-20 md:gap-y-24 items-center justify-center min-h-screen">
+        <video id="video-invito" class="w-2xl h-auto justify-self-start" width="320" height="240" controls>
+            <source src="/invito.mp4" type="video/mp4">
+        </video>
+        <div
+            class="w-full mx-14 flex flex-col md:flex-row justify-between md:items-baseline gap-4 md:gap-x-10 text-center text-xl md:text-2xl">
+            <p class="bg-[#004481] text-white rounded-md py-2 md:px-2">Vi terrò aggiornati</p>
+            <a class="inline-block bg-[#c39d48] text-black hover:text-gray-700 underline rounded-md p-2"
+                href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Via
+                Francesco De Sanctis, 1, 86100
+                Campobasso CB</a>
+            <p class="bg-[#004481] text-white rounded-md py-2 md:px-2">Orario da definire</p>
+        </div>
+    </main>
+    <footer
+        class="bg-[#004481] text-white text-center p-8 flex flex-col md:flex-row md:gap-x-10 items-center justify-center gap-y-10 min-h-screen">
+        <p class="text-4xl sm:text-5xl max-w-2xs">Fammi sapere se ci sarai compilando questo modulo</p>
+        <a class="text-xl sm:text-3xl inline-block rounded-md p-2 sm:p-4 bg-[#92241d] hover:opacity-90"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdLgV7Szo9jujns3Ytl5TGYbU_pp_y2DYra39Pfjx8Rz3ZWHQ/viewform?usp=dialog"
+            target="_blank">Compila il
+            modulo</a>
+    </footer>
 </body>
 
 </html>
