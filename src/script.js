@@ -1,7 +1,6 @@
 function playVideo(videoEl) {
   videoEl.muted = true;
   videoEl.play();
-  videoEl.muted = false;
 }
 
 const videoInvito = document.getElementById("video-invito");
