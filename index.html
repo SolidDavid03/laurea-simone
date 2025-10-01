@@ -20,36 +20,46 @@
         </figure>
     </header>
 
-    <main class="p-8 sm:p-20 flex flex-col gap-y-20 md:gap-y-24 items-center justify-center min-h-screen">
+    <main class="p-8 sm:p-20 flex flex-col items-center justify-center min-h-screen gap-y-10">
 
-        <video id="video-invito" class="w-2xl h-auto justify-self-start" width="10" height="10" controls>
-            <source src="./video/invito/invito.webm" type="video/webm">
-            <source src="./video/invito/invito.mp4" type="video/mp4">
-            Il tuo browser non supporta il formato video.
-        </video>
+        <section class="flex flex-col gap-y-10 justify-center items-center">
 
-        <div
-            class="container flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-x-10 text-center text-xl md:text-2xl">
-            <p class="text-box">Vi terrò aggiornati</p>
-            <a class="link-btn"
-                href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank">Luogo festa</a>
-            <a class="link-btn" href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Posizione
-                università</a>
-            <p class="text-box">Orario proclamazione da definire (probabilmente
-                mattina)</p>
-        </div>
+            <video id="video-invito" class="video-size" width="10" height="10" controls>
+                <source src="./video/invito/invito.mp4" type="video/mp4">
+                <source src="./video/invito/invito.webm" type="video/webm">
+                Il tuo browser non supporta il formato video.
+            </video>
 
-        <section>
-            <h2>Come arrivare alla festa</h2>
-            <div>
-                <video>
-                    <source>
-                    <source>
+            <div
+                class="container flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-x-10 text-center text-xl md:text-2xl">
+                <p class="text-box">Vi terrò aggiornati</p>
+                <a class="link-btn"
+                    href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank">Luogo festa</a>
+                <a class="link-btn" href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Posizione
+                    università</a>
+                <p class="text-box">Orario proclamazione da definire (probabilmente
+                    mattina)</p>
+            </div>
+
+        </section>
+
+        <h2 class="text-3xl md:text-4xl text-center w-screen bg-[#004481] text-white p-10">Come arrivare alla festa
+        </h2>
+
+        <section class="flex flex-col md:flex-row justify-center items-center text-center gap-y-8 md:gap-x-10">
+            <div class="flex flex-col justify-center items-center gap-y-4">
+                <h3 class="video-heading">Per utenti android</h3>
+                <video width="10" height="10" controls class="video-size">
+                    <source src="./video/indicazioni/utenti-android.mp4" type="video/mp4">
+                    <source src="./video/indicazioni/utenti-android.webm" type="video/webm">
                 </video>
-                <video>
-                    <source>
-                    <source>
+            </div>
+            <div class="flex flex-col justify-center items-center gap-y-4">
+                <h3 class="video-heading">Per utenti apple</h3>
+                <video width="10" height="10" controls class="video-size">
+                    <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
+                    <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
                 </video>
             </div>
         </section>
@@ -58,9 +68,9 @@
 
     <footer
         class="bg-[#004481] text-white text-center pt-8 px-8 flex flex-col items-center justify-center gap-y-10 min-h-screen">
-        <p class="text-4xl sm:text-5xl max-w-xl break-words">Fammi sapere se ci sarai compilando questo modulo. Mi
+        <h2 class="text-4xl sm:text-5xl max-w-xl break-words">Fammi sapere se ci sarai compilando questo modulo. Mi
             semplificherai
-            la vita così, grazie</p>
+            la vita così, grazie</h2>
         <div class="bg-[#F0EBF8] w-screen h-full">
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdLgV7Szo9jujns3Ytl5TGYbU_pp_y2DYra39Pfjx8Rz3ZWHQ/viewform?embedded=true"
