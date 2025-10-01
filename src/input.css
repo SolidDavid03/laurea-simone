@@ -3,11 +3,11 @@
 
 @layer components {
   .text-box {
-    @apply bg-[#004481] text-white rounded-md py-2 md:px-2;
+    @apply bg-[#004481] text-white rounded-md py-2 md:px-2 text-center text-xl md:text-2xl;
   }
 
   .link-btn {
-    @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words;
+    @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words text-center text-xl md:text-2xl;
   }
 
   .video-heading {
