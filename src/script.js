@@ -18,3 +18,17 @@ const obsOptions = {
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(videoInvito);
+
+const videoHeadings = Array.from(
+  document.getElementsByClassName("video-heading")
+);
+
+videoHeadings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    const videoEl = Array.from(heading.parentElement.children).find((el) =>
+      el.classList.contains("dropdown")
+    );
+
+    videoEl.classList.toggle("hidden");
+  });
+});

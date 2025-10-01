@@ -11,10 +11,14 @@
   }
 
   .video-heading {
-    @apply text-2xl md:text-3xl;
+    @apply text-2xl md:text-3xl cursor-pointer p-4 bg-gray-100 font-semibold rounded-lg;
   }
 
   .video-size {
     @apply w-2xl h-auto;
+  }
+
+  .video-style {
+    @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
 }
