@@ -1,1 +1,12 @@
 @import "tailwindcss";
+@import "tailwindcss/utilities";
+
+@layer components {
+  .text-box {
+    @apply bg-[#004481] text-white rounded-md py-2 md:px-2;
+  }
+
+  .link-btn {
+    @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words;
+  }
+}

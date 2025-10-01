@@ -1,5 +1,4 @@
 /*! tailwindcss v4.1.13 | MIT License | https://tailwindcss.com */
-@layer properties;
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -11,7 +10,6 @@
     --color-black: #000;
     --color-white: #fff;
     --spacing: 0.25rem;
-    --container-3xs: 16rem;
     --container-2xs: 18rem;
     --container-xl: 36rem;
     --container-2xl: 42rem;
@@ -19,8 +17,6 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -203,9 +199,6 @@
   .m-0 {
     margin: calc(var(--spacing) * 0);
   }
-  .mx-2 {
-    margin-inline: calc(var(--spacing) * 2);
-  }
   .box-border {
     box-sizing: border-box;
   }
@@ -214,21 +207,6 @@
   }
   .flex {
     display: flex;
-  }
-  .inline-block {
-    display: inline-block;
-  }
-  .table {
-    display: table;
-  }
-  .h-2 {
-    height: calc(var(--spacing) * 2);
-  }
-  .h-10 {
-    height: calc(var(--spacing) * 10);
-  }
-  .h-20 {
-    height: calc(var(--spacing) * 20);
   }
   .h-auto {
     height: auto;
@@ -245,21 +223,6 @@
   .w-2xl {
     width: var(--container-2xl);
   }
-  .w-5 {
-    width: calc(var(--spacing) * 5);
-  }
-  .w-5\/6 {
-    width: calc(5/6 * 100%);
-  }
-  .w-\[80vw\] {
-    width: 80vw;
-  }
-  .w-\[90vw\] {
-    width: 90vw;
-  }
-  .w-\[95vw\] {
-    width: 95vw;
-  }
   .w-full {
     width: 100%;
   }
@@ -269,17 +232,8 @@
   .max-w-2xs {
     max-width: var(--container-2xs);
   }
-  .max-w-3xs {
-    max-width: var(--container-3xs);
-  }
   .max-w-xl {
     max-width: var(--container-xl);
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -314,21 +268,11 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
-  .border {
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-  }
   .bg-\[\#004481\] {
     background-color: #004481;
   }
-  .bg-\[\#92241d\] {
-    background-color: #92241d;
-  }
   .bg-\[\#F0EBF8\] {
     background-color: #F0EBF8;
-  }
-  .bg-\[\#c39d48\] {
-    background-color: #c39d48;
   }
   .bg-white {
     background-color: var(--color-white);
@@ -336,26 +280,14 @@
   .p-0 {
     padding: calc(var(--spacing) * 0);
   }
-  .p-2 {
-    padding: calc(var(--spacing) * 2);
-  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
-  }
-  .px-2 {
-    padding-inline: calc(var(--spacing) * 2);
   }
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
-  }
-  .py-8 {
-    padding-block: calc(var(--spacing) * 8);
-  }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -377,57 +309,12 @@
   .break-words {
     overflow-wrap: break-word;
   }
-  .text-black {
-    color: var(--color-black);
-  }
   .text-white {
     color: var(--color-white);
-  }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
-  }
-  .hover\:text-gray-700 {
-    &:hover {
-      @media (hover: hover) {
-        color: var(--color-gray-700);
-      }
-    }
-  }
-  .hover\:opacity-90 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 90%;
-      }
-    }
-  }
-  .focus\:text-gray-700 {
-    &:focus {
-      color: var(--color-gray-700);
-    }
-  }
-  .focus\:opacity-90 {
-    &:focus {
-      opacity: 90%;
-    }
-  }
-  .sm\:p-4 {
-    @media (width >= 40rem) {
-      padding: calc(var(--spacing) * 4);
-    }
   }
   .sm\:p-20 {
     @media (width >= 40rem) {
       padding: calc(var(--spacing) * 20);
-    }
-  }
-  .sm\:text-3xl {
-    @media (width >= 40rem) {
-      font-size: var(--text-3xl);
-      line-height: var(--tw-leading, var(--text-3xl--line-height));
     }
   }
   .sm\:text-5xl {
@@ -439,11 +326,6 @@
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
-    }
-  }
-  .md\:items-baseline {
-    @media (width >= 48rem) {
-      align-items: baseline;
     }
   }
   .md\:items-center {
@@ -472,32 +354,32 @@
       line-height: var(--tw-leading, var(--text-2xl--line-height));
     }
   }
-  .lg\:flex-row {
-    @media (width >= 64rem) {
-      flex-direction: row;
+}
+@layer components {
+  .text-box {
+    border-radius: var(--radius-md);
+    background-color: #004481;
+    padding-block: calc(var(--spacing) * 2);
+    color: var(--color-white);
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 2);
     }
   }
-  .lg\:gap-x-10 {
-    @media (width >= 64rem) {
-      column-gap: calc(var(--spacing) * 10);
+  .link-btn {
+    display: inline-block;
+    border-radius: var(--radius-md);
+    background-color: #c39d48;
+    padding: calc(var(--spacing) * 2);
+    overflow-wrap: break-word;
+    color: var(--color-black);
+    text-decoration-line: underline;
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-gray-700);
+      }
     }
-  }
-}
-@property --tw-border-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@layer properties {
-  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
-    *, ::before, ::after, ::backdrop {
-      --tw-border-style: solid;
-      --tw-outline-style: solid;
+    &:focus {
+      color: var(--color-gray-700);
     }
   }
 }
