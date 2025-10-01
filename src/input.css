@@ -21,4 +21,8 @@
   .video-style {
     @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
+
+  .rotate-180 {
+    @apply rotate-180;
+  }
 }

@@ -29,6 +29,9 @@ videoHeadings.forEach((heading) => {
       el.classList.contains("dropdown")
     );
 
+    const svgIcon = heading.querySelector("svg");
+
     videoEl.classList.toggle("hidden");
+    svgIcon.classList.toggle("rotate-180");
   });
 });
