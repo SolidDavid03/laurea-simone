@@ -18,3 +18,20 @@ const obsOptions = {
 
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(videoInvito);
+
+const videoHeadings = Array.from(
+  document.getElementsByClassName("video-heading")
+);
+
+videoHeadings.forEach((heading) => {
+  heading.addEventListener("click", () => {
+    const videoEl = Array.from(heading.parentElement.children).find((el) =>
+      el.classList.contains("dropdown")
+    );
+
+    const svgIcon = heading.querySelector("svg");
+
+    videoEl.classList.toggle("hidden");
+    svgIcon.classList.toggle("rotate-180");
+  });
+});
