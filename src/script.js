@@ -20,7 +20,7 @@ const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(videoInvito);
 
 const videoHeadings = Array.from(
-  document.getElementsByClassName("video-heading")
+  document.getElementsByClassName("dropdown-button")
 );
 
 videoHeadings.forEach((heading) => {

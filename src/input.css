@@ -14,7 +14,7 @@
     @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words text-center text-xl md:text-2xl;
   }
 
-  .video-heading {
+  .dropdown-button {
     @apply text-2xl md:text-3xl cursor-pointer p-4 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 font-semibold rounded-lg;
   }
 
@@ -25,12 +25,19 @@
   .video-style {
     @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
+
+  .rotate-180 {
+    @apply rotate-[180deg];
+  }
+
+  .form-container-size {
+    @apply w-screen h-96;
+  }
 }
 
 .directions-grid {
   display: grid;
   grid-template-columns: 2rem, 1fr, 1fr, 2rem;
-  grid-template-rows: auto;
   gap: 2rem;
   padding-bottom: 2rem;
 
@@ -39,15 +46,6 @@
     ". android android ."
     ". apple apple ."
     ". join join .";
-}
-
-@media (min-width: 768px) {
-  .directions-grid {
-    grid-template-areas:
-      "heading heading heading heading"
-      ". android apple ."
-      ". join join .";
-  }
 }
 
 .heading-grid-area {
@@ -63,4 +61,13 @@
 }
 .join-grid-area {
   grid-area: join;
+}
+
+@media (min-width: 768px) {
+  .directions-grid {
+    grid-template-areas:
+      "heading heading heading heading"
+      ". android apple ."
+      ". join join .";
+  }
 }
