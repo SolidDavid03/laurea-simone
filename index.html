@@ -11,35 +11,49 @@
 
 <body class="m-0 p-0 box-border bg-white font-sans gap-y-2 overflow-x-hidden">
 
-    <header
-        class="bg-[#004481] text-white text-center p-8 flex flex-col gap-y-10 md:gap-x-10 items-center justify-center min-h-screen">
+    <header class="sticky top-0 bg-[#c3151c]">
 
-        <div class="flex flex-col md:flex-row justify-center items-center">
-            <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei
-                stato/a scelto/a per il 23 ottobre
-            </h1>
-            <figure>
-                <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
-            </figure>
-        </div>
-
-        <div>
-            <p class="text-xl max-w-2xs break-words">Controllate questo link ogni tanto</p>
-        </div>
+        <nav class="p-4">
+            <ul class="flex flex-row justify-between md:justify-center items-center gap-x-6 break-words">
+                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-info" class="navigation-link">Info
+                        proclamazione</a>
+                </li>
+                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-indicazioni-stradali"
+                        class="navigation-link">Indicazioni
+                        stradali</a></li>
+                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-conferma-presenza"
+                        class="navigation-link">Moduli</a></li>
+            </ul>
+        </nav>
 
     </header>
 
-    <main class="p-8 sm:p-20 flex flex-col items-center justify-center min-h-screen gap-y-10">
+    <main class="flex flex-col gap-y-10">
 
-        <section class="flex flex-col gap-y-10 justify-center items-center">
+        <section
+            class="bg-[#004481] text-white text-center flex flex-col pb-8 gap-y-10 md:gap-x-10 items-center justify-center min-h-screen">
+            <div class="flex flex-col md:flex-row justify-center items-center p-8">
+                <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei
+                    stato/a scelto/a per il 23 ottobre
+                </h1>
+                <figure>
+                    <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
+                </figure>
+            </div>
 
+            <div>
+                <p class="text-xl max-w-2xs break-words">Controllate questo link ogni tanto</p>
+            </div>
+        </section>
+
+        <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen">
             <video id="video-invito" class="video-size video-style" width="10" height="10" controls>
                 <source src="./video/invito/invito.mp4" type="video/mp4">
                 <source src="./video/invito/invito.webm" type="video/webm">
                 Il tuo browser non supporta il formato video.
             </video>
 
-            <div class="container flex flex-col md:flex-row justify-between md:items-center gap-4 md:gap-x-10">
+            <div class="container flex flex-col md:flex-row px-8 justify-between md:items-center gap-4 md:gap-x-10">
                 <p class="text-box">Vi terrò aggiornati</p>
                 <a class="link-btn"
                     href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
@@ -52,12 +66,14 @@
 
         </section>
 
-        <h2 class="text-3xl md:text-4xl text-center w-screen bg-[#004481] text-white p-10">Come arrivare alla festa
-        </h2>
+        <section class="directions-grid min-h-screen" id="sezione-indicazioni-stradali">
 
-        <section class="flex flex-col md:flex-row justify-center items-center text-center gap-y-8 md:gap-x-10">
+            <h2 class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10">
+                Come arrivare alla
+                festa
+            </h2>
 
-            <div class="flex flex-col justify-center items-center gap-y-4">
+            <div class="android-grid-area flex flex-col justify-center items-center gap-y-4">
                 <div class="flex flex-row justify-center items-center gap-x-2 video-heading">
                     <h3>Per utenti android</h3>
                     <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -72,7 +88,7 @@
                 </video>
             </div>
 
-            <div class="flex flex-col justify-center items-center gap-y-4">
+            <div class="apple-grid-area flex flex-col justify-center items-center gap-y-4">
                 <div class="flex flex-row justify-center items-center gap-x-2 video-heading">
                     <h3>Per utenti apple</h3>
                     <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
@@ -88,25 +104,25 @@
                 </video>
             </div>
 
+            <div class="join-grid-area flex flex-col justify-center items-center gap-y-4">
+                <p class="py-2 md:px-2 text-center text-xl md:text-2xl break-words max-w-lg">Se vuoi metterti in
+                    contatto
+                    con gli altri
+                    invitati clicca qui sotto per unirti al
+                    gruppo whatsapp.
+                </p>
+                <a class="link-btn no-underline" href="https://chat.whatsapp.com/J6hniPHTNBYBwwM5gNPolN?mode=ems_copy_t"
+                    target="_blank">Unisciti</a>
+            </div>
         </section>
 
-        <div class="flex flex-col justify-center items-center gap-y-4">
-            <p class="py-2 md:px-2 text-center text-xl md:text-2xl break-words max-w-lg">Se vuoi metterti in contatto
-                con gli altri
-                invitati clicca qui sotto per unirti al
-                gruppo whatsapp.
-            </p>
-            <a class="link-btn no-underline" href="https://chat.whatsapp.com/J6hniPHTNBYBwwM5gNPolN?mode=ems_copy_t"
-                target="_blank">Unisciti</a>
-        </div>
 
     </main>
 
-    <footer
+    <footer id="sezione-conferma-presenza"
         class="bg-[#004481] text-white text-center pt-8 px-8 flex flex-col items-center justify-center gap-y-10 min-h-screen">
-        <h2 class="text-4xl sm:text-5xl max-w-xl break-words">Fammi sapere se ci sarai compilando questo modulo. Mi
-            semplificherai
-            la vita così, grazie</h2>
+        <h2 class="text-4xl sm:text-5xl max-w-xl break-words">Compilando questi moduli mi aiuterai ad organizzare meglio
+            il tutto</h2>
         <div class="bg-[#F0EBF8] w-screen h-full">
             <iframe
                 src="https://docs.google.com/forms/d/e/1FAIpQLSdLgV7Szo9jujns3Ytl5TGYbU_pp_y2DYra39Pfjx8Rz3ZWHQ/viewform?embedded=true"

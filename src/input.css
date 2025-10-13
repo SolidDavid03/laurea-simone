@@ -2,6 +2,10 @@
 @import "tailwindcss/utilities";
 
 @layer components {
+  .navigation-link {
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm md:text-xl text-center hover:underline focus:underline break-words cursor-pointer;
+  }
+
   .text-box {
     @apply bg-[#004481] text-white rounded-md py-2 md:px-2 text-center text-xl md:text-2xl;
   }
@@ -21,8 +25,42 @@
   .video-style {
     @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
+}
 
-  .rotate-180 {
-    @apply rotate-180;
+.directions-grid {
+  display: grid;
+  grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding-bottom: 2rem;
+
+  grid-template-areas:
+    "heading heading heading heading"
+    ". android android ."
+    ". apple apple ."
+    ". join join .";
+}
+
+@media (min-width: 768px) {
+  .directions-grid {
+    grid-template-areas:
+      "heading heading heading heading"
+      ". android apple ."
+      ". join join .";
   }
+}
+
+.heading-grid-area {
+  grid-area: heading;
+}
+
+.android-grid-area {
+  grid-area: android;
+}
+
+.apple-grid-area {
+  grid-area: apple;
+}
+.join-grid-area {
+  grid-area: join;
 }
