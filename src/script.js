@@ -19,19 +19,19 @@ const obsOptions = {
 const observer = new IntersectionObserver(obsCallback, obsOptions);
 observer.observe(videoInvito);
 
-const videoHeadings = Array.from(
-  document.getElementsByClassName("video-heading")
+const dropdownButtons = Array.from(
+  document.getElementsByClassName("dropdown-button")
 );
 
-videoHeadings.forEach((heading) => {
-  heading.addEventListener("click", () => {
-    const videoEl = Array.from(heading.parentElement.children).find((el) =>
-      el.classList.contains("dropdown")
+dropdownButtons.forEach((dropdownBtn) => {
+  dropdownBtn.addEventListener("click", () => {
+    const dropdownEl = Array.from(dropdownBtn.parentElement.children).find(
+      (el) => el.classList.contains("dropdown-element")
     );
 
-    const svgIcon = heading.querySelector("svg");
+    const svgIcon = dropdownBtn.querySelector("svg");
 
-    videoEl.classList.toggle("hidden");
+    dropdownEl.classList.toggle("hidden");
     svgIcon.classList.toggle("rotate-180");
   });
 });

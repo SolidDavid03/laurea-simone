@@ -2,6 +2,10 @@
 @import "tailwindcss/utilities";
 
 @layer components {
+  .navigation-link {
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm md:text-xl text-center hover:underline focus:underline break-words cursor-pointer;
+  }
+
   .text-box {
     @apply bg-[#004481] text-white rounded-md py-2 md:px-2 text-center text-xl md:text-2xl;
   }
@@ -10,7 +14,7 @@
     @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words text-center text-xl md:text-2xl;
   }
 
-  .video-heading {
+  .dropdown-button {
     @apply text-2xl md:text-3xl cursor-pointer p-4 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 font-semibold rounded-lg;
   }
 
@@ -23,6 +27,118 @@
   }
 
   .rotate-180 {
-    @apply rotate-180;
+    @apply rotate-[180deg];
+  }
+
+  .form-container-size {
+    @apply w-screen h-96;
+  }
+}
+
+.directions-grid {
+  display: grid;
+  grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+  grid-template-rows: auto;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  align-items: baseline;
+
+  grid-template-areas:
+    "heading heading heading heading"
+    ". android android ."
+    ". apple apple ."
+    ". join join ."
+    ". ai-image ai-image ."
+    "bus-schedule bus-schedule bus-schedule bus-schedule";
+}
+
+.bus-schedule-grid-area {
+  grid-area: bus-schedule;
+}
+
+.heading-grid-area {
+  grid-area: heading;
+}
+
+.android-grid-area {
+  grid-area: android;
+}
+
+.apple-grid-area {
+  grid-area: apple;
+}
+
+.join-grid-area {
+  grid-area: join;
+}
+
+.ai-image-grid-area {
+  grid-area: ai-image;
+}
+
+@media (min-width: 768px) {
+  .directions-grid {
+    grid-template-areas:
+      "heading heading heading heading"
+      ". android apple ."
+      ". join join ."
+      ". ai-image ai-image ."
+      ". bus-schedule bus-schedule .";
+  }
+}
+
+.new-item {
+  position: relative;
+}
+
+.new-item::after {
+  position: absolute;
+  content: "Nuovo!";
+  top: -10px;
+  right: -20px;
+  color: #ffffff;
+  background-image: linear-gradient(
+    to bottom,
+    #ff0000,
+    #f3130f,
+    #e6261e,
+    #da392d,
+    #ce4c3c,
+    #c15e4a,
+    #b57159
+  );
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-inline: 2px;
+  border: dotted 2px #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  animation: emphasis 1500ms infinite;
+}
+
+header .new-item::after {
+  font-size: 0.5rem;
+  top: -10px;
+  right: 20%;
+}
+
+@keyframes emphasis {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (min-width: 768px) {
+  header .new-item::after {
+    top: -5px;
+    right: -10px;
   }
 }
