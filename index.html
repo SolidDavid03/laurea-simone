@@ -82,28 +82,30 @@
                             d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                     </svg>
                 </div>
-                <video width="10" height="10" controls class="video-size video-style dropdown hidden">
+                <video width="10" height="10" controls class="video-size video-style dropdown-element hidden">
                     <source src="./video/indicazioni/utenti-android.mp4" type="video/mp4">
                     <source src="./video/indicazioni/utenti-android.webm" type="video/webm">
                     Il tuo browser non supporta il formato video.
                 </video>
             </div>
 
-            <div class="apple-grid-area flex flex-col justify-center items-center gap-y-4">
+            <div class="apple-grid-area flex flex-col justify-center items-center gap-y-4 text-center">
                 <div class="flex flex-row justify-center items-center gap-x-2 dropdown-button">
                     <h3>Per utenti apple</h3>
-                    <!-- <p>Se hai problemi segui le indicazioni di google maps</p> -->
                     <svg class="size-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
                         <path
                             d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                     </svg>
                 </div>
 
-                <video width="10" height="10" controls class="video-size video-style dropdown hidden">
-                    <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
-                    <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
-                    Il tuo browser non supporta il formato video.
-                </video>
+                <div class="dropdown-element hidden">
+                    <p class="text-center py-4 text-xl">Se hai problemi segui le indicazioni di google maps</p>
+                    <video width="10" height="10" controls class="video-size video-style">
+                        <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
+                        <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
+                        Il tuo browser non supporta il formato video.
+                    </video>
+                </div>
             </div>
 
             <div class="join-grid-area flex flex-col justify-center items-center gap-y-4">
@@ -116,7 +118,12 @@
                 <a class="link-btn no-underline" href="https://chat.whatsapp.com/J6hniPHTNBYBwwM5gNPolN?mode=ems_copy_t"
                     target="_blank">Unisciti</a>
             </div>
-            <!-- <img src="./immagini/whatsapp-photo.png"> -->
+
+            <figure
+                class="ai-image-grid-area place-self-center max-w-3xl bg-white shadow-lg rounded-lg border-4 border-gray-100">
+                <img class="w-full h-full max-h-96" src="./immagini/whatsapp-photo.png">
+            </figure>
+
         </section>
 
 
@@ -142,7 +149,7 @@
                         d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                 </svg>
             </div>
-            <div class="bg-[#F0EBF8] form-container-size dropdown hidden">
+            <div class="bg-[#F0EBF8] form-container-size dropdown-element hidden">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSe0SSNkQFjB0kEi1gawPsEwAFMDEtk5JnApUJST9IgyZsMhYQ/viewform?embedded=true"
                     width="200" height="1530" frameborder="0" marginheight="0" marginwidth="0" class="w-full h-full">
@@ -164,7 +171,7 @@
                         d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                 </svg>
             </div>
-            <div class="bg-[#F0EBF8] form-container-size dropdown hidden">
+            <div class="bg-[#F0EBF8] form-container-size dropdown-element hidden">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLScqKDUcExSbbBCJg2BNCUxiauas4tp8f0g9aA0XNErAGQByPw/viewform?embedded=true"
                     width="200" height="1530" frameborder="0" marginheight="0" marginwidth="0" class="w-full h-full">
@@ -184,7 +191,7 @@
                         d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                 </svg>
             </div>
-            <div class="bg-[#F0EBF8] form-container-size dropdown hidden">
+            <div class="bg-[#F0EBF8] form-container-size dropdown-element hidden">
                 <iframe
                     src="https://docs.google.com/forms/d/e/1FAIpQLSdLgV7Szo9jujns3Ytl5TGYbU_pp_y2DYra39Pfjx8Rz3ZWHQ/viewform?embedded=true"
                     width="200" height="1530" frameborder="0" marginheight="0" marginwidth="0" class="w-full h-full">

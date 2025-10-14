@@ -38,14 +38,17 @@
 .directions-grid {
   display: grid;
   grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+  grid-template-rows: auto;
   gap: 2rem;
   padding-bottom: 2rem;
+  align-items: baseline;
 
   grid-template-areas:
     "heading heading heading heading"
     ". android android ."
     ". apple apple ."
-    ". join join .";
+    ". join join ."
+    ". ai-image ai-image .";
 }
 
 .heading-grid-area {
@@ -59,8 +62,13 @@
 .apple-grid-area {
   grid-area: apple;
 }
+
 .join-grid-area {
   grid-area: join;
+}
+
+.ai-image-grid-area {
+  grid-area: ai-image;
 }
 
 @media (min-width: 768px) {
@@ -68,6 +76,7 @@
     grid-template-areas:
       "heading heading heading heading"
       ". android apple ."
-      ". join join .";
+      ". join join ."
+      ". ai-image ai-image .";
   }
 }
