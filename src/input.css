@@ -48,7 +48,12 @@
     ". android android ."
     ". apple apple ."
     ". join join ."
-    ". ai-image ai-image .";
+    ". ai-image ai-image ."
+    "bus-schedule bus-schedule bus-schedule bus-schedule";
+}
+
+.bus-schedule-grid-area {
+  grid-area: bus-schedule;
 }
 
 .heading-grid-area {
@@ -77,6 +82,11 @@
       "heading heading heading heading"
       ". android apple ."
       ". join join ."
-      ". ai-image ai-image .";
+      ". ai-image ai-image ."
+      ". bus-schedule bus-schedule .";
   }
 }
+
+/* .new-item {
+
+} */

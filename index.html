@@ -99,7 +99,7 @@
                 </div>
 
                 <div class="dropdown-element hidden">
-                    <p class="text-center py-4 text-xl">Se hai problemi segui le indicazioni di google maps</p>
+                    <p class="text-center py-4 text-md">Se hai problemi segui le indicazioni di google maps</p>
                     <video width="10" height="10" controls class="video-size video-style">
                         <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
                         <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
@@ -121,11 +121,23 @@
 
             <figure
                 class="ai-image-grid-area place-self-center max-w-3xl bg-white shadow-lg rounded-lg border-4 border-gray-100">
-                <img class="w-full h-full max-h-96" src="./immagini/whatsapp-photo.png">
+                <img class="w-full h-full max-h-96" src="./immagini/whatsapp-photo.png"
+                    alt="Simone che ripara le gomme di un'auto con una chiave inglese">
             </figure>
 
-        </section>
+            <article class="flex flex-col gap-y-4 bus-schedule-grid-area">
+                <h3 class="text-xl md:text-2xl text-center font-semibold px-4">Qui sotto puoi trovare gli orari del bus
+                    Sepino-Campobasso
+                    di ATM Molise</h3>
+                <iframe src="./file/orari-bus-atm.pdf" width="100%" height="500px" class="w-full">
 
+                    <p>Il tuo browser non supporta i file PDF incorporati. Puoi <a
+                            class="underline text-blue-700 hover:text-blue-400 focus:text-blue-400"
+                            href="./file/orari-bus-atm.pdf">scaricare
+                            il pdf</a> in alternativa.</p>
+                </iframe>
+            </article>
+        </section>
 
     </main>
 
