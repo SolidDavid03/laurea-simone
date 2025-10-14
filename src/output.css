@@ -635,6 +635,46 @@
     grid-template-areas: "heading heading heading heading" ". android apple ." ". join join ." ". ai-image ai-image ." ". bus-schedule bus-schedule .";
   }
 }
+.new-item {
+  position: relative;
+}
+.new-item::after {
+  position: absolute;
+  content: "Nuovo!";
+  top: -10px;
+  right: -20px;
+  color: #ffffff;
+  background-image: linear-gradient( to bottom, #ff0000, #f3130f, #e6261e, #da392d, #ce4c3c, #c15e4a, #b57159 );
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding-inline: 2px;
+  border: dotted 2px #ffffff;
+  border-radius: 4px;
+  text-align: center;
+  animation: emphasis 1500ms infinite;
+}
+header .new-item::after {
+  font-size: 0.5rem;
+  top: -10px;
+  right: 20%;
+}
+@keyframes emphasis {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (min-width: 768px) {
+  header .new-item::after {
+    top: -5px;
+    right: -10px;
+  }
+}
 @property --tw-border-style {
   syntax: "*";
   inherits: false;
