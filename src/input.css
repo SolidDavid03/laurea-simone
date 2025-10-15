@@ -145,6 +145,12 @@ header .new-item::after {
   right: -10px;
 }
 
+.davide-figure-grid-area figcaption a::after {
+  top: -5px;
+  right: -10px;
+  font-size: 0.5rem;
+}
+
 @keyframes emphasis {
   0% {
     transform: scale(1);
@@ -170,21 +176,22 @@ header .new-item::after {
   min-height: 100vh;
   display: grid;
   grid-template-columns: var(--default-grid-template-columns);
-  grid-template-rows: auto;
   row-gap: 2rem;
   padding: 2rem;
   grid-template-areas:
     ". credits-heading credits-heading ."
-    ". simone-figure simone-figure ."
-    ". davide-figure davide-figure .";
+    ". . . ."
+    ". davide-figure davide-figure ."
+    ". . . ."
+    ". simone-figure simone-figure .";
 }
 
 @media (min-width: 768px) {
   .credits-grid {
-    column-gap: 2rem;
+    column-gap: 4rem;
     grid-template-areas:
       ". credits-heading credits-heading ."
-      ". simone-figure davide-figure .";
+      ". davide-figure simone-figure .";
   }
 }
 
@@ -207,11 +214,11 @@ header .new-item::after {
 
 @layer components {
   .contributor-container {
-    @apply w-full h-full max-h-[26rem] flex flex-col gap-y-4;
+    @apply w-full flex flex-col gap-y-4;
   }
 
   .contributor-container figcaption {
-    @apply order-1 flex flex-col justify-center items-center gap-y-1;
+    @apply order-1 flex flex-col justify-center items-center gap-y-4 h-full max-h-[26rem];
   }
 
   .contributor-container figcaption h3,
@@ -231,7 +238,3 @@ header .new-item::after {
     @apply size-full max-w-[300px] bg-white shadow-lg border-4 border-gray-100 rounded-full;
   }
 }
-
-/* * {
-  outline: 1px red solid;
-} */

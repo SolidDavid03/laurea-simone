@@ -9,6 +9,8 @@
       "Courier New", monospace;
     --color-yellow-600: oklch(68.1% 0.162 75.834);
     --color-yellow-700: oklch(55.4% 0.135 66.442);
+    --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-700: oklch(52.7% 0.154 150.069);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
     --color-gray-600: oklch(44.6% 0.03 256.802);
@@ -342,6 +344,9 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#28A745\] {
+    background-color: #28A745;
+  }
   .bg-\[\#004481\] {
     background-color: #004481;
   }
@@ -442,6 +447,13 @@
   .filter {
     filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
   }
+  .hover\:bg-green-700 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-700);
+      }
+    }
+  }
   .hover\:bg-yellow-600 {
     &:hover {
       @media (hover: hover) {
@@ -456,9 +468,24 @@
       }
     }
   }
+  .focus\:bg-green-700 {
+    &:focus {
+      background-color: var(--color-green-700);
+    }
+  }
   .focus\:bg-yellow-600 {
     &:focus {
       background-color: var(--color-yellow-600);
+    }
+  }
+  .focus\:text-gray-600 {
+    &:focus {
+      color: var(--color-gray-600);
+    }
+  }
+  .active\:bg-green-400 {
+    &:active {
+      background-color: var(--color-green-400);
     }
   }
   .sm\:flex {
@@ -730,6 +757,11 @@ header .new-item::after {
   top: 0px;
   right: -10px;
 }
+.davide-figure-grid-area figcaption a::after {
+  top: -5px;
+  right: -10px;
+  font-size: 0.5rem;
+}
 @keyframes emphasis {
   0% {
     transform: scale(1);
@@ -751,15 +783,14 @@ header .new-item::after {
   min-height: 100vh;
   display: grid;
   grid-template-columns: var(--default-grid-template-columns);
-  grid-template-rows: auto;
   row-gap: 2rem;
   padding: 2rem;
-  grid-template-areas: ". credits-heading credits-heading ." ". simone-figure simone-figure ." ". davide-figure davide-figure .";
+  grid-template-areas: ". credits-heading credits-heading ." ". . . ." ". davide-figure davide-figure ." ". . . ." ". simone-figure simone-figure .";
 }
 @media (min-width: 768px) {
   .credits-grid {
-    column-gap: 2rem;
-    grid-template-areas: ". credits-heading credits-heading ." ". simone-figure davide-figure .";
+    column-gap: 4rem;
+    grid-template-areas: ". credits-heading credits-heading ." ". davide-figure simone-figure .";
   }
 }
 .credits-grid > *, .contributor-container img {
@@ -777,8 +808,6 @@ header .new-item::after {
 @layer components {
   .contributor-container {
     display: flex;
-    height: 100%;
-    max-height: 26rem;
     width: 100%;
     flex-direction: column;
     row-gap: calc(var(--spacing) * 4);
@@ -786,10 +815,12 @@ header .new-item::after {
   .contributor-container figcaption {
     order: 1;
     display: flex;
+    height: 100%;
+    max-height: 26rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    row-gap: calc(var(--spacing) * 1);
+    row-gap: calc(var(--spacing) * 4);
   }
   .contributor-container figcaption h3, .contributor-container figcaption p {
     text-align: center;
