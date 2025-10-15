@@ -7,11 +7,11 @@
 
 @layer components {
   .navigation-list-item {
-    @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center;
+    @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center hover:underline focus:underline cursor-pointer active:bg-yellow-700;
   }
 
   .navigation-link {
-    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl text-center hover:underline focus:underline cursor-pointer;
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl cursor-pointer;
   }
 
   .text-box {
@@ -20,6 +20,14 @@
 
   .link-btn {
     @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words text-center text-xl md:text-2xl;
+  }
+
+  .dropdown-arrow-menu-enabled {
+    @apply -bottom-3 right-1 rotate-180;
+  }
+
+  .dropdown-arrow-menu-disabled {
+    @apply top-3 right-1;
   }
 
   .dropdown-button {
@@ -43,6 +51,16 @@
   }
 }
 
+/* #x {
+  animation
+}
+
+@keyframes smooth-menu-toggle {
+  0% {
+
+  }
+} */
+
 .directions-grid {
   display: grid;
   grid-template-columns: var(--default-grid-template-columns);
@@ -53,6 +71,7 @@
 
   grid-template-areas:
     "heading heading heading heading"
+    ". party-place party-place ."
     ". android android ."
     ". apple apple ."
     ". join join ."
@@ -60,12 +79,13 @@
     "bus-schedule bus-schedule bus-schedule bus-schedule";
 }
 
-.bus-schedule-grid-area {
-  grid-area: bus-schedule;
-}
-
 .heading-grid-area {
   grid-area: heading;
+}
+
+.party-place-grid-area {
+  grid-area: party-place;
+  place-self: center;
 }
 
 .android-grid-area {
@@ -84,10 +104,15 @@
   grid-area: ai-image;
 }
 
+.bus-schedule-grid-area {
+  grid-area: bus-schedule;
+}
+
 @media (min-width: 768px) {
   .directions-grid {
     grid-template-areas:
       "heading heading heading heading"
+      ". party-place party-place ."
       ". android apple ."
       ". join join ."
       ". ai-image ai-image ."
@@ -217,6 +242,6 @@ header .new-item::after {
   }
 }
 
-* {
+/* * {
   outline: 1px red solid;
-}
+} */

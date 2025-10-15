@@ -13,10 +13,10 @@
 
     <header class="sticky top-0 bg-[#c3151c]">
 
-        <nav class="p-4 flex flex-col items-center justify-center">
+        <nav id="menu" class="p-4 flex flex-col items-center justify-center h-auto sm:flex">
             <ul
                 class="flex flex-col gap-y-2 align-center justify-center w-full max-w-xs sm:flex-row sm:w-fit sm:max-w-full sm:gap-x-4">
-                <li class="navigation-list-item"><a href="#sezione-info" class="navigation-link">Info
+                <li class="navigation-list-item new-item"><a href="#sezione-info" class="navigation-link">Info
                         proclamazione</a>
                 </li>
                 <li class="navigation-list-item"><a href="#sezione-indicazioni-stradali"
@@ -29,6 +29,13 @@
             </ul>
         </nav>
 
+        <svg id="dropdown-arrow"
+            class="size-6 bg-black fill-white border-white border rounded-full absolute dropdown-arrow-menu-enabled sm:hidden"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path
+                d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
+        </svg>
+
     </header>
 
     <main class="flex flex-col gap-y-10">
@@ -36,8 +43,8 @@
         <section
             class="bg-[#004481] text-white text-center flex flex-col pb-8 gap-y-10 md:gap-x-10 items-center justify-center min-h-screen">
             <div class="flex flex-col md:flex-row justify-center items-center p-8">
-                <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei
-                    stato/a scelto/a per il 23 ottobre
+                <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs font-bold">Complimenti sei
+                    stato/a scelto/a per il 23 ottobre alle 10:15
                 </h1>
                 <figure>
                     <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
@@ -47,24 +54,33 @@
             <div>
                 <p class="text-xl max-w-2xs break-words">Controllate questo link ogni tanto</p>
             </div>
+
+            <div class="flex flex-col justify-center items-center gap-y-2">
+                <p class="text-xl max-w-2xs break-words">Informazioni a seguire</p>
+                <svg class="size-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
+                </svg>
+            </div>
+
         </section>
 
-        <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen">
+        <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen w-screen">
             <video id="video-invito" class="video-size border-and-shadow" width="10" height="10" controls>
                 <source src="./video/invito/invito.mp4" type="video/mp4">
                 <source src="./video/invito/invito.webm" type="video/webm">
                 Il tuo browser non supporta il formato video.
             </video>
 
-            <div class="container flex flex-col md:flex-row px-8 justify-between md:items-center gap-4 md:gap-x-10">
-                <p class="text-box">Vi terrò aggiornati</p>
-                <a class="link-btn"
-                    href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank">Luogo festa</a>
+            <h2 class="text-4xl sm:text-5xl w-full break-words text-center font-bold px-8">Info proclamazione</h2>
+
+            <div
+                class="container flex flex-col md:flex-row px-8 justify-between md:items-center gap-4 md:gap-x-10 w-full max-w-5xl">
+                <p class="text-box new-item">Alle ore 10:15 AM</p>
                 <a class="link-btn" href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Posizione
                     università</a>
-                <p class="text-box">Orario proclamazione da definire (probabilmente
-                    mattina 10:00/12:00)</p>
+                <p class="text-box new-item">Dipartimento di Scienze Umanistiche, Sociali e della Formazione
+                    II Edificio Polifunzionale – Aula P</p>
             </div>
 
         </section>
@@ -72,10 +88,14 @@
         <section class="directions-grid min-h-screen" id="sezione-indicazioni-stradali">
 
             <h2
-                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 px-4 w-full self-center">
+                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 px-4 w-full self-center font-bold">
                 Come arrivare alla
                 festa
             </h2>
+
+            <a class="link-btn party-place-grid-area"
+                href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Luogo festa</a>
 
             <div class="android-grid-area flex flex-col justify-center items-center gap-y-4">
                 <div class="flex flex-row justify-center items-center gap-x-2 dropdown-button">
@@ -140,7 +160,7 @@
 
     <section id="sezione-moduli" class="flex flex-col bg-[#004481] text-white p-8 gap-y-10 min-h-screen">
 
-        <h2 class="text-4xl sm:text-5xl w-full break-words text-center">Compilando questi
+        <h2 class="text-4xl sm:text-5xl w-full break-words text-center font-bold">Compilando questi
             moduli
             mi aiuterai
             ad
@@ -213,7 +233,7 @@
 
     <footer class="credits-grid" id="sezione-crediti">
 
-        <h2 class="text-4xl sm:text-5xl w-full break-words text-center credits-heading-grid-area">Crediti</h2>
+        <h2 class="text-4xl sm:text-5xl w-full break-words text-center credits-heading-grid-area font-bold">Crediti</h2>
 
         <figure class="contributor-container simone-figure-grid-area">
             <figcaption class="order-1 flex flex-col gap-y-1">
