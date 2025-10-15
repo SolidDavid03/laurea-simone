@@ -9,8 +9,8 @@ header {
   position: sticky;
   top: 0px;
   z-index: 999;
-  isolation: isolate; /* Creates isolated stacking context */
-  transform: translateZ(0); /* Forces hardware acceleration */
+  isolation: isolate;
+  transform: translateZ(0);
 }
 
 @layer components {
