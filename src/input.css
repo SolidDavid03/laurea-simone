@@ -5,6 +5,14 @@
   --default-grid-template-columns: 2rem, 1fr, 1fr, 2rem;
 }
 
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  isolation: isolate; /* Creates isolated stacking context */
+  transform: translateZ(0); /* Forces hardware acceleration */
+}
+
 @layer components {
   .navigation-list-item {
     @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center hover:underline focus:underline cursor-pointer active:bg-yellow-700;

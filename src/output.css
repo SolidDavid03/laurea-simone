@@ -196,12 +196,6 @@
   .absolute {
     position: absolute;
   }
-  .sticky {
-    position: sticky;
-  }
-  .top-0 {
-    top: calc(var(--spacing) * 0);
-  }
   .order-1 {
     order: 1;
   }
@@ -565,6 +559,13 @@
 }
 :root {
   --default-grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+}
+header {
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+  isolation: isolate;
+  transform: translateZ(0);
 }
 @layer components {
   .navigation-list-item {
