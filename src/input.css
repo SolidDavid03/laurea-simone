@@ -51,16 +51,6 @@
   }
 }
 
-/* #x {
-  animation
-}
-
-@keyframes smooth-menu-toggle {
-  0% {
-
-  }
-} */
-
 .directions-grid {
   display: grid;
   grid-template-columns: var(--default-grid-template-columns);
