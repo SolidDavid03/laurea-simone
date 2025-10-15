@@ -13,13 +13,13 @@ header {
   transform: translateZ(0); /* Forces hardware acceleration */
 }
 
-@layer components {
-  .navigation-list-item {
-    @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center hover:underline focus:underline cursor-pointer active:bg-yellow-700;
-  }
+* {
+  outline: 1px solid red;
+}
 
+@layer components {
   .navigation-link {
-    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl cursor-pointer;
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl cursor-pointer bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center hover:underline focus:underline active:bg-yellow-700;
   }
 
   .text-box {

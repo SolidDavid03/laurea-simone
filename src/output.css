@@ -567,8 +567,11 @@ header {
   isolation: isolate;
   transform: translateZ(0);
 }
+* {
+  outline: 1px solid red;
+}
 @layer components {
-  .navigation-list-item {
+  .navigation-link {
     width: 100%;
     cursor: pointer;
     place-self: center;
@@ -576,31 +579,28 @@ header {
     background-color: #c39d48;
     padding: calc(var(--spacing) * 2);
     text-align: center;
-    overflow-wrap: break-word;
-    &:hover {
-      @media (hover: hover) {
-        text-decoration-line: underline;
-      }
-    }
-    &:focus {
-      text-decoration-line: underline;
-    }
-    &:active {
-      background-color: var(--color-yellow-700);
-    }
-  }
-  .navigation-link {
-    cursor: pointer;
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
+    overflow-wrap: break-word;
     color: var(--color-black);
     &:hover {
       @media (hover: hover) {
         color: var(--color-gray-700);
       }
     }
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
     &:focus {
       color: var(--color-gray-700);
+    }
+    &:focus {
+      text-decoration-line: underline;
+    }
+    &:active {
+      background-color: var(--color-yellow-700);
     }
     @media (width >= 40rem) {
       font-size: var(--text-xl);
