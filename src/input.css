@@ -217,11 +217,11 @@ header .new-item::after {
 
 @layer components {
   .contributor-container {
-    @apply w-full md:h-96;
+    @apply w-full h-full max-h-[26rem] flex flex-col gap-y-4;
   }
 
-  .contributor-container {
-    @apply flex flex-col gap-y-4 w-full;
+  .contributor-container figcaption {
+    @apply order-1 flex flex-col justify-center items-center gap-y-1;
   }
 
   .contributor-container figcaption h3,
