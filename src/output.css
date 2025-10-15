@@ -567,9 +567,6 @@ header {
   isolation: isolate;
   transform: translateZ(0);
 }
-* {
-  outline: 1px solid red;
-}
 @layer components {
   .navigation-link {
     width: 100%;
