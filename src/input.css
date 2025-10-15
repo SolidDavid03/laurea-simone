@@ -1,9 +1,17 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
+:root {
+  --default-grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+}
+
 @layer components {
+  .navigation-list-item {
+    @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center hover:underline focus:underline cursor-pointer active:bg-yellow-700;
+  }
+
   .navigation-link {
-    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm md:text-xl text-center hover:underline focus:underline break-words cursor-pointer;
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl cursor-pointer;
   }
 
   .text-box {
@@ -14,6 +22,14 @@
     @apply inline-block bg-[#c39d48] text-black hover:text-gray-700 focus:text-gray-700 underline rounded-md p-2 break-words text-center text-xl md:text-2xl;
   }
 
+  .dropdown-arrow-menu-enabled {
+    @apply -bottom-3 right-1 rotate-180;
+  }
+
+  .dropdown-arrow-menu-disabled {
+    @apply top-3 right-1;
+  }
+
   .dropdown-button {
     @apply text-2xl md:text-3xl cursor-pointer p-4 bg-gray-100 hover:bg-gray-200 focus:bg-gray-200 font-semibold rounded-lg;
   }
@@ -22,7 +38,7 @@
     @apply w-2xl h-auto;
   }
 
-  .video-style {
+  .border-and-shadow {
     @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
 
@@ -37,7 +53,7 @@
 
 .directions-grid {
   display: grid;
-  grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+  grid-template-columns: var(--default-grid-template-columns);
   grid-template-rows: auto;
   gap: 2rem;
   padding-bottom: 2rem;
@@ -45,6 +61,7 @@
 
   grid-template-areas:
     "heading heading heading heading"
+    ". party-place party-place ."
     ". android android ."
     ". apple apple ."
     ". join join ."
@@ -52,12 +69,13 @@
     "bus-schedule bus-schedule bus-schedule bus-schedule";
 }
 
-.bus-schedule-grid-area {
-  grid-area: bus-schedule;
-}
-
 .heading-grid-area {
   grid-area: heading;
+}
+
+.party-place-grid-area {
+  grid-area: party-place;
+  place-self: center;
 }
 
 .android-grid-area {
@@ -76,10 +94,15 @@
   grid-area: ai-image;
 }
 
+.bus-schedule-grid-area {
+  grid-area: bus-schedule;
+}
+
 @media (min-width: 768px) {
   .directions-grid {
     grid-template-areas:
       "heading heading heading heading"
+      ". party-place party-place ."
       ". android apple ."
       ". join join ."
       ". ai-image ai-image ."
@@ -118,8 +141,14 @@
 
 header .new-item::after {
   font-size: 0.5rem;
-  top: -10px;
-  right: 20%;
+  top: 0px;
+  right: -10px;
+}
+
+.davide-figure-grid-area figcaption a::after {
+  top: -5px;
+  right: -10px;
+  font-size: 0.5rem;
 }
 
 @keyframes emphasis {
@@ -136,9 +165,76 @@ header .new-item::after {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   header .new-item::after {
     top: -5px;
     right: -10px;
+  }
+}
+
+.credits-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--default-grid-template-columns);
+  row-gap: 2rem;
+  padding: 2rem;
+  grid-template-areas:
+    ". credits-heading credits-heading ."
+    ". . . ."
+    ". davide-figure davide-figure ."
+    ". . . ."
+    ". simone-figure simone-figure .";
+}
+
+@media (min-width: 768px) {
+  .credits-grid {
+    column-gap: 4rem;
+    grid-template-areas:
+      ". credits-heading credits-heading ."
+      ". davide-figure simone-figure .";
+  }
+}
+
+.credits-grid > *,
+.contributor-container img {
+  place-self: center;
+}
+
+.credits-heading-grid-area {
+  grid-area: credits-heading;
+}
+
+.simone-figure-grid-area {
+  grid-area: simone-figure;
+}
+
+.davide-figure-grid-area {
+  grid-area: davide-figure;
+}
+
+@layer components {
+  .contributor-container {
+    @apply w-full flex flex-col gap-y-4;
+  }
+
+  .contributor-container figcaption {
+    @apply order-1 flex flex-col justify-center items-center gap-y-4 h-full max-h-[26rem];
+  }
+
+  .contributor-container figcaption h3,
+  .contributor-container figcaption p {
+    @apply text-center;
+  }
+
+  .contributor-container figcaption h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  .contributor-container figcaption p {
+    @apply text-xl md:text-2xl break-words;
+  }
+
+  .contributor-container img {
+    @apply size-full max-w-[300px] bg-white shadow-lg border-4 border-gray-100 rounded-full;
   }
 }

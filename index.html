@@ -9,23 +9,32 @@
     <script defer src="./src/script.js"></script>
 </head>
 
-<body class="m-0 p-0 box-border bg-white font-sans gap-y-2 overflow-x-hidden">
+<body class="m-0 p-0 box-border bg-white font-sans overflow-x-hidden">
 
     <header class="sticky top-0 bg-[#c3151c]">
 
-        <nav class="p-4">
-            <ul class="flex flex-row justify-between md:justify-center items-center gap-x-6 break-words">
-                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-info" class="navigation-link">Info
+        <nav id="menu" class="p-4 flex flex-col items-center justify-center h-auto sm:flex">
+            <ul
+                class="flex flex-col gap-y-2 align-center justify-center w-full max-w-xs sm:flex-row sm:w-fit sm:max-w-full sm:gap-x-4">
+                <li class="navigation-list-item new-item"><a href="#sezione-info" class="navigation-link">Info
                         proclamazione</a>
                 </li>
-                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-indicazioni-stradali"
+                <li class="navigation-list-item"><a href="#sezione-indicazioni-stradali"
                         class="navigation-link">Indicazioni
                         stradali</a></li>
-                <li class="bg-[#c39d48] p-2 rounded-md new-item"><a href="#sezione-moduli"
-                        class="navigation-link">Moduli</a>
+                <li class="navigation-list-item new-item"><a href="#sezione-moduli" class="navigation-link">Moduli</a>
+                </li>
+                <li class="navigation-list-item new-item"><a href="#sezione-crediti" class="navigation-link">Crediti</a>
                 </li>
             </ul>
         </nav>
+
+        <svg id="dropdown-arrow"
+            class="size-6 bg-black fill-white border-white border rounded-full absolute dropdown-arrow-menu-enabled sm:hidden"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+            <path
+                d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
+        </svg>
 
     </header>
 
@@ -34,8 +43,8 @@
         <section
             class="bg-[#004481] text-white text-center flex flex-col pb-8 gap-y-10 md:gap-x-10 items-center justify-center min-h-screen">
             <div class="flex flex-col md:flex-row justify-center items-center p-8">
-                <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs">Complimenti sei
-                    stato/a scelto/a per il 23 ottobre
+                <h1 class="text-4xl sm:text-5xl order-1 max-w-2xs font-bold">Complimenti sei
+                    stato/a scelto/a per il 23 ottobre alle 10:15
                 </h1>
                 <figure>
                     <img class="block w-full" src="./immagini/unimol-logo.png" alt="unmimol logo">
@@ -45,24 +54,33 @@
             <div>
                 <p class="text-xl max-w-2xs break-words">Controllate questo link ogni tanto</p>
             </div>
+
+            <div class="flex flex-col justify-center items-center gap-y-2">
+                <p class="text-xl max-w-2xs break-words">Informazioni a seguire</p>
+                <svg class="size-6 fill-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
+                </svg>
+            </div>
+
         </section>
 
-        <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen">
-            <video id="video-invito" class="video-size video-style" width="10" height="10" controls>
+        <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen w-screen">
+            <video id="video-invito" class="video-size border-and-shadow" width="10" height="10" controls>
                 <source src="./video/invito/invito.mp4" type="video/mp4">
                 <source src="./video/invito/invito.webm" type="video/webm">
                 Il tuo browser non supporta il formato video.
             </video>
 
-            <div class="container flex flex-col md:flex-row px-8 justify-between md:items-center gap-4 md:gap-x-10">
-                <p class="text-box">Vi terrò aggiornati</p>
-                <a class="link-btn"
-                    href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank">Luogo festa</a>
+            <h2 class="text-4xl sm:text-5xl w-full break-words text-center font-bold px-8">Info proclamazione</h2>
+
+            <div
+                class="container flex flex-col md:flex-row px-8 justify-between md:items-center gap-4 md:gap-x-10 w-full max-w-5xl">
+                <p class="text-box new-item">Alle ore 10:15 AM</p>
                 <a class="link-btn" href="https://maps.app.goo.gl/DfnEgb1VUV4teSvX7" target="_blank">Posizione
                     università</a>
-                <p class="text-box">Orario proclamazione da definire (probabilmente
-                    mattina 10:00/12:00)</p>
+                <p class="text-box new-item">Dipartimento di Scienze Umanistiche, Sociali e della Formazione
+                    II Edificio Polifunzionale – Aula P</p>
             </div>
 
         </section>
@@ -70,10 +88,14 @@
         <section class="directions-grid min-h-screen" id="sezione-indicazioni-stradali">
 
             <h2
-                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 w-full self-center">
+                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 px-4 w-full self-center font-bold">
                 Come arrivare alla
                 festa
             </h2>
+
+            <a class="link-btn party-place-grid-area"
+                href="https://www.google.com/maps/place/41%C2%B025'20.5%22N+14%C2%B037'45.7%22E/@41.4223562,14.6286065,18z/data=!3m1!4b1!4m4!3m3!8m2!3d41.422355!4d14.629372?entry=ttu&g_ep=EgoyMDI1MDkyNC4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank">Luogo festa</a>
 
             <div class="android-grid-area flex flex-col justify-center items-center gap-y-4">
                 <div class="flex flex-row justify-center items-center gap-x-2 dropdown-button">
@@ -83,7 +105,7 @@
                             d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                     </svg>
                 </div>
-                <video width="10" height="10" controls class="video-size video-style dropdown-element hidden">
+                <video width="10" height="10" controls class="video-size border-and-shadow dropdown-element hidden">
                     <source src="./video/indicazioni/utenti-android.mp4" type="video/mp4">
                     <source src="./video/indicazioni/utenti-android.webm" type="video/webm">
                     Il tuo browser non supporta il formato video.
@@ -101,7 +123,7 @@
 
                 <div class="dropdown-element hidden">
                     <p class="text-center py-4 text-md">Se hai problemi segui le indicazioni di google maps</p>
-                    <video width="10" height="10" controls class="video-size video-style">
+                    <video width="10" height="10" controls class="video-size border-and-shadow">
                         <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
                         <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
                         Il tuo browser non supporta il formato video.
@@ -130,15 +152,15 @@
                 <h3 class="text-xl md:text-2xl text-center font-semibold px-4">Qui sotto puoi trovare gli orari del bus
                     Sepino-Campobasso
                     di ATM Molise</h3>
-                <a class="link-btn" href="./file/orari-bus-atm.pdf">Scarica PDF orari</a>
+                <a class="link-btn" href="./file/orari-bus-atm.pdf" target="_blank">Scarica PDF orari</a>
             </article>
         </section>
 
     </main>
 
-    <footer id="sezione-moduli" class="flex flex-col bg-[#004481] text-white p-8 gap-y-10 min-h-screen">
+    <section id="sezione-moduli" class="flex flex-col bg-[#004481] text-white p-8 gap-y-10 min-h-screen">
 
-        <h2 class="text-4xl sm:text-5xl w-full break-words text-center">Compilando questi
+        <h2 class="text-4xl sm:text-5xl w-full break-words text-center font-bold">Compilando questi
             moduli
             mi aiuterai
             ad
@@ -206,6 +228,44 @@
                 </iframe>
             </div>
         </article>
+
+    </section>
+
+    <footer class="credits-grid" id="sezione-crediti">
+
+        <h2 class="text-4xl sm:text-5xl w-full break-words text-center credits-heading-grid-area font-bold">Crediti</h2>
+
+        <figure class="contributor-container davide-figure-grid-area">
+            <figcaption>
+                <p>Devi organizzare anche tu una laurea? Beh, auguri.</p>
+                <p>No scherzo, se vuoi un link del genere...</p>
+                <a class="link-btn no-underline text-white bg-[#28A745] hover:bg-green-700 focus:bg-green-700 active:bg-green-400 new-item"
+                    href="https://wa.me/qr/TLLFGFAIVNBTJ1" target="_blank">Contattami (è
+                    gratis 😉)</a>
+                <div class="flex">
+                    <h3><a href="https://www.linkedin.com/in/davideficocelli-frontenddeveloper-" target="_blank"
+                            class="underline hover:text-gray-600 focus:text-gray-600">Davide
+                            Ficocelli</a></h3>
+                    <svg class="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                        <path
+                            d="M512 96L127.9 96C110.3 96 96 110.5 96 128.3L96 511.7C96 529.5 110.3 544 127.9 544L512 544C529.6 544 544 529.5 544 511.7L544 128.3C544 110.5 529.6 96 512 96zM231.4 480L165 480L165 266.2L231.5 266.2L231.5 480L231.4 480zM198.2 160C219.5 160 236.7 177.2 236.7 198.5C236.7 219.8 219.5 237 198.2 237C176.9 237 159.7 219.8 159.7 198.5C159.7 177.2 176.9 160 198.2 160zM480.3 480L413.9 480L413.9 376C413.9 351.2 413.4 319.3 379.4 319.3C344.8 319.3 339.5 346.3 339.5 374.2L339.5 480L273.1 480L273.1 266.2L336.8 266.2L336.8 295.4L337.7 295.4C346.6 278.6 368.3 260.9 400.6 260.9C467.8 260.9 480.3 305.2 480.3 362.8L480.3 480z" />
+                    </svg>
+                </div>
+                <p>Frontend developer</p>
+                <p>(Quello che si è fatto il culo)</p>
+            </figcaption>
+            <img src="./immagini/davide-linkedin.png" alt="Davide">
+        </figure>
+
+        <figure class="contributor-container simone-figure-grid-area">
+            <figcaption>
+                <h3>Simone Ficocelli</h3>
+                <p>Project manager</p>
+                <p>(Quello che si deve laureare)</p>
+            </figcaption>
+            <img src="./immagini/simone-linkedin.jpeg" alt="Simone">
+        </figure>
+
     </footer>
 </body>
 
