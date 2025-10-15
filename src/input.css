@@ -1,9 +1,17 @@
 @import "tailwindcss";
 @import "tailwindcss/utilities";
 
+:root {
+  --default-grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+}
+
 @layer components {
+  .navigation-list-item {
+    @apply bg-[#c39d48] p-2 rounded-md w-full place-self-center break-words text-center;
+  }
+
   .navigation-link {
-    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm md:text-xl text-center hover:underline focus:underline break-words cursor-pointer;
+    @apply text-black hover:text-gray-700 focus:text-gray-700 text-sm sm:text-xl text-center hover:underline focus:underline cursor-pointer;
   }
 
   .text-box {
@@ -22,7 +30,7 @@
     @apply w-2xl h-auto;
   }
 
-  .video-style {
+  .border-and-shadow {
     @apply bg-white shadow-lg rounded-lg border-4 border-gray-100;
   }
 
@@ -37,7 +45,7 @@
 
 .directions-grid {
   display: grid;
-  grid-template-columns: 2rem, 1fr, 1fr, 2rem;
+  grid-template-columns: var(--default-grid-template-columns);
   grid-template-rows: auto;
   gap: 2rem;
   padding-bottom: 2rem;
@@ -118,8 +126,8 @@
 
 header .new-item::after {
   font-size: 0.5rem;
-  top: -10px;
-  right: 20%;
+  top: 0px;
+  right: -10px;
 }
 
 @keyframes emphasis {
@@ -136,9 +144,79 @@ header .new-item::after {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   header .new-item::after {
     top: -5px;
     right: -10px;
   }
+}
+
+.credits-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: var(--default-grid-template-columns);
+  grid-template-rows: auto;
+  row-gap: 2rem;
+  padding: 2rem;
+  grid-template-areas:
+    ". credits-heading credits-heading ."
+    ". simone-figure simone-figure ."
+    ". davide-figure davide-figure .";
+}
+
+@media (min-width: 768px) {
+  .credits-grid {
+    column-gap: 2rem;
+    grid-template-areas:
+      ". credits-heading credits-heading ."
+      ". simone-figure davide-figure .";
+  }
+}
+
+.credits-grid > *,
+.contributor-container img {
+  place-self: center;
+}
+
+.credits-heading-grid-area {
+  grid-area: credits-heading;
+}
+
+.simone-figure-grid-area {
+  grid-area: simone-figure;
+}
+
+.davide-figure-grid-area {
+  grid-area: davide-figure;
+}
+
+@layer components {
+  .contributor-container {
+    @apply w-full md:h-96;
+  }
+
+  .contributor-container {
+    @apply flex flex-col gap-y-4 w-full;
+  }
+
+  .contributor-container figcaption h3,
+  .contributor-container figcaption p {
+    @apply text-center;
+  }
+
+  .contributor-container figcaption h3 {
+    @apply text-2xl md:text-3xl font-semibold;
+  }
+
+  .contributor-container figcaption p {
+    @apply text-xl md:text-2xl break-words;
+  }
+
+  .contributor-container img {
+    @apply size-full max-w-[300px] bg-white shadow-lg border-4 border-gray-100 rounded-full;
+  }
+}
+
+* {
+  outline: 1px red solid;
 }

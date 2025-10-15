@@ -9,20 +9,22 @@
     <script defer src="./src/script.js"></script>
 </head>
 
-<body class="m-0 p-0 box-border bg-white font-sans gap-y-2 overflow-x-hidden">
+<body class="m-0 p-0 box-border bg-white font-sans overflow-x-hidden">
 
     <header class="sticky top-0 bg-[#c3151c]">
 
-        <nav class="p-4">
-            <ul class="flex flex-row justify-between md:justify-center items-center gap-x-6 break-words">
-                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-info" class="navigation-link">Info
+        <nav class="p-4 flex flex-col items-center justify-center">
+            <ul
+                class="flex flex-col gap-y-2 align-center justify-center w-full max-w-xs sm:flex-row sm:w-fit sm:max-w-full sm:gap-x-4">
+                <li class="navigation-list-item"><a href="#sezione-info" class="navigation-link">Info
                         proclamazione</a>
                 </li>
-                <li class="bg-[#c39d48] p-2 rounded-md"><a href="#sezione-indicazioni-stradali"
+                <li class="navigation-list-item"><a href="#sezione-indicazioni-stradali"
                         class="navigation-link">Indicazioni
                         stradali</a></li>
-                <li class="bg-[#c39d48] p-2 rounded-md new-item"><a href="#sezione-moduli"
-                        class="navigation-link">Moduli</a>
+                <li class="navigation-list-item new-item"><a href="#sezione-moduli" class="navigation-link">Moduli</a>
+                </li>
+                <li class="navigation-list-item new-item"><a href="#sezione-crediti" class="navigation-link">Crediti</a>
                 </li>
             </ul>
         </nav>
@@ -48,7 +50,7 @@
         </section>
 
         <section id="sezione-info" class="flex flex-col gap-y-10 justify-center items-center min-h-screen">
-            <video id="video-invito" class="video-size video-style" width="10" height="10" controls>
+            <video id="video-invito" class="video-size border-and-shadow" width="10" height="10" controls>
                 <source src="./video/invito/invito.mp4" type="video/mp4">
                 <source src="./video/invito/invito.webm" type="video/webm">
                 Il tuo browser non supporta il formato video.
@@ -70,7 +72,7 @@
         <section class="directions-grid min-h-screen" id="sezione-indicazioni-stradali">
 
             <h2
-                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 w-full self-center">
+                class="heading-grid-area text-3xl md:text-4xl text-center bg-[#004481] text-white py-10 px-4 w-full self-center">
                 Come arrivare alla
                 festa
             </h2>
@@ -83,7 +85,7 @@
                             d="M297.4 566.6C309.9 579.1 330.2 579.1 342.7 566.6L502.7 406.6C515.2 394.1 515.2 373.8 502.7 361.3C490.2 348.8 469.9 348.8 457.4 361.3L352 466.7L352 96C352 78.3 337.7 64 320 64C302.3 64 288 78.3 288 96L288 466.7L182.6 361.3C170.1 348.8 149.8 348.8 137.3 361.3C124.8 373.8 124.8 394.1 137.3 406.6L297.3 566.6z" />
                     </svg>
                 </div>
-                <video width="10" height="10" controls class="video-size video-style dropdown-element hidden">
+                <video width="10" height="10" controls class="video-size border-and-shadow dropdown-element hidden">
                     <source src="./video/indicazioni/utenti-android.mp4" type="video/mp4">
                     <source src="./video/indicazioni/utenti-android.webm" type="video/webm">
                     Il tuo browser non supporta il formato video.
@@ -101,7 +103,7 @@
 
                 <div class="dropdown-element hidden">
                     <p class="text-center py-4 text-md">Se hai problemi segui le indicazioni di google maps</p>
-                    <video width="10" height="10" controls class="video-size video-style">
+                    <video width="10" height="10" controls class="video-size border-and-shadow">
                         <source src="./video/indicazioni/utenti-apple.mp4" type="video/mp4">
                         <source src="./video/indicazioni/utenti-apple.webm" type="video/webm">
                         Il tuo browser non supporta il formato video.
@@ -136,7 +138,7 @@
 
     </main>
 
-    <footer id="sezione-moduli" class="flex flex-col bg-[#004481] text-white p-8 gap-y-10 min-h-screen">
+    <section id="sezione-moduli" class="flex flex-col bg-[#004481] text-white p-8 gap-y-10 min-h-screen">
 
         <h2 class="text-4xl sm:text-5xl w-full break-words text-center">Compilando questi
             moduli
@@ -206,6 +208,32 @@
                 </iframe>
             </div>
         </article>
+
+    </section>
+
+    <footer class="credits-grid" id="sezione-crediti">
+
+        <h2 class="text-4xl sm:text-5xl w-full break-words text-center credits-heading-grid-area">Crediti</h2>
+
+        <figure class="contributor-container simone-figure-grid-area">
+            <figcaption class="order-1 flex flex-col gap-y-1">
+                <h3>Simone Ficocelli</h3>
+                <p>Project manager</p>
+                <p>(Quello che si deve laureare)</p>
+            </figcaption>
+            <img src="./immagini/simone-linkedin.jpeg" alt="Simone">
+        </figure>
+
+
+        <figure class="contributor-container davide-figure-grid-area">
+            <figcaption class="order-1 flex flex-col gap-y-1">
+                <h3>Davide Ficocelli</h3>
+                <p>Frontend developer</p>
+                <p>(Quello che si è fatto il culo)</p>
+            </figcaption>
+            <img src="./immagini/davide-linkedin.png" alt="Davide">
+        </figure>
+
     </footer>
 </body>
 
